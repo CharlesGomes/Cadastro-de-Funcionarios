@@ -1,0 +1,3 @@
+﻿1>------ Build started: Project: Cadastro de Funcionarios, Configuration: Debug Any CPU ------
+1>  Cadastro de Funcionarios -> C:\Users\Charles\Desktop\Cadastro de Funcionarios Original\Cadastro de Funcionarios\bin\Debug\Cadastro de Funcionarios.exe
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
