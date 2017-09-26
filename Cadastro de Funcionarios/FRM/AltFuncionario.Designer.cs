@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AltFuncionario));
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -158,22 +159,26 @@
             // 
             // button2
             // 
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.Location = new System.Drawing.Point(377, 330);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(114, 33);
             this.button2.TabIndex = 39;
-            this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.Location = new System.Drawing.Point(198, 330);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(135, 33);
             this.button1.TabIndex = 38;
-            this.button1.Text = "Alterar";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // TbxEmail
@@ -290,7 +295,7 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "Nome:";
             // 
-            // AltClientes
+            // AltFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -319,7 +324,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TbxNome);
             this.Controls.Add(this.label1);
-            this.Name = "AltClientes";
+            this.Name = "AltFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AltFuncionários";
             this.ResumeLayout(false);

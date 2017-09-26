@@ -42,5 +42,10 @@ namespace Cadastro_de_Funcionarios
             }
         
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,14 +28,14 @@ namespace Cadastro_de_Funcionarios
             try
             {
                 // String de Conexão pegando os atributos da classe
-                this.objConexao = new MySqlConnection("server=" + this.server + ";port=" + this.port + ";User Id=" + this.user + ";database=" + this.database + ";passoword=" + this.password);
+                objConexao = new MySqlConnection("server=" + this.server + ";port=" + this.port + ";User Id=" + this.user + ";database=" + this.database + ";passoword=" + this.password);
                
             }
             catch
             {
                 // Caso a conexão falhe, exibe uma mensagem para o usuário
                 MessageBox.Show("Erro ao conectar-se ao MySQL!");
-                this.objConexao = null;
+                objConexao = null;
             }
         }
 
