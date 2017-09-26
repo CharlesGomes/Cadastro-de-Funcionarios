@@ -50,7 +50,9 @@ namespace Cadastro_de_Funcionarios
 
             MySqlCommand command = new MySqlCommand();
 
-            Banco.objConexao.Open();
+            MySqlConnection con = null;
+            con = Banco.AbrirConexao();
+
             command.Connection = Banco.objConexao;
 
             try

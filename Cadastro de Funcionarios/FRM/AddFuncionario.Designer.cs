@@ -108,6 +108,7 @@
             // TbxSexo
             // 
             this.TbxSexo.AccessibleName = "Sexo";
+            this.TbxSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TbxSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbxSexo.FormattingEnabled = true;
             this.TbxSexo.Items.AddRange(new object[] {
@@ -266,6 +267,7 @@
             // CbxEstadoCivil
             // 
             this.CbxEstadoCivil.AccessibleName = "Estado Civil";
+            this.CbxEstadoCivil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxEstadoCivil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbxEstadoCivil.FormattingEnabled = true;
             this.CbxEstadoCivil.Items.AddRange(new object[] {

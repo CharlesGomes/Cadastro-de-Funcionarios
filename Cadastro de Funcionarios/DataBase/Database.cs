@@ -23,20 +23,23 @@ namespace Cadastro_de_Funcionarios
         public MySqlConnection objConexao;
 
         /** Método de Conexão ao MySQL **/
-        public Database()
+        public MySqlConnection AbrirConexao()
         {
-            try
-            {
+           
                 // String de Conexão pegando os atributos da classe
                 objConexao = new MySqlConnection("server=" + this.server + ";port=" + this.port + ";User Id=" + this.user + ";database=" + this.database + ";passoword=" + this.password);
-               
+            try
+            {
+
+                objConexao.Open();
             }
             catch
             {
                 // Caso a conexão falhe, exibe uma mensagem para o usuário
                 MessageBox.Show("Erro ao conectar-se ao MySQL!");
-                objConexao = null;
+                Application.ExitThread(); 
             }
+            return objConexao;
         }
 
     }

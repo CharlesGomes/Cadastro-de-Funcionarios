@@ -176,7 +176,8 @@ namespace Cadastro_de_Funcionarios
 
             MySqlCommand command = new MySqlCommand();
 
-            Banco.objConexao.Open();
+            MySqlConnection con = null;
+            con = Banco.AbrirConexao();
             command.Connection = Banco.objConexao;
 
             try
@@ -201,8 +202,9 @@ namespace Cadastro_de_Funcionarios
 
             MySqlCommand command = new MySqlCommand();
 
-            Banco.objConexao.Open();
-            command.Connection = Banco.objConexao;
+            MySqlConnection con = null;
+            con = Banco.AbrirConexao();
+            command.Connection = con;
 
             try
             {
@@ -228,8 +230,9 @@ namespace Cadastro_de_Funcionarios
 
             MySqlCommand command = new MySqlCommand();
 
-            Banco.objConexao.Open();
-            command.Connection = Banco.objConexao;
+            MySqlConnection con = null;
+            con = Banco.AbrirConexao();
+            command.Connection = con;
 
             try
             {
@@ -253,8 +256,9 @@ namespace Cadastro_de_Funcionarios
 
             MySqlCommand command = new MySqlCommand();
 
-            Banco.objConexao.Open();
-            command.Connection = Banco.objConexao;
+            MySqlConnection con = null;
+            con = Banco.AbrirConexao();
+            command.Connection = con;
 
             try
             {
@@ -276,7 +280,7 @@ namespace Cadastro_de_Funcionarios
             Database Banco = new Database();
 
             MySqlCommand command = new MySqlCommand();
-            MySqlConnection con = new MySqlConnection();
+            //MySqlConnection con = new MySqlConnection();
 
             try
             {
@@ -284,8 +288,8 @@ namespace Cadastro_de_Funcionarios
                 command.CommandText = "SELECT * FROM funcionario WHERE id =" + cod + "";
 
                 command.CommandType = CommandType.Text;
-                command.Connection = Banco.objConexao;
-                con.Open();
+                MySqlConnection con = null;
+                con = Banco.AbrirConexao();
                 rd = command.ExecuteReader();
 
                 Funcionario funcionario = new Funcionario();

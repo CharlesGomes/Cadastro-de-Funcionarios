@@ -49,7 +49,8 @@ namespace Cadastro_de_Funcionarios
 
             MySqlCommand command = new MySqlCommand();
 
-            Banco.objConexao.Open();
+            MySqlConnection con = null;
+            con = Banco.AbrirConexao();
             command.Connection = Banco.objConexao;
 
             try
@@ -79,8 +80,9 @@ namespace Cadastro_de_Funcionarios
 
             MySqlCommand command = new MySqlCommand();
 
-            Banco.objConexao.Open();
-            command.Connection = Banco.objConexao;
+            MySqlConnection con = null;
+            con = Banco.AbrirConexao();
+            command.Connection = con;
 
             try
             {
@@ -102,7 +104,7 @@ namespace Cadastro_de_Funcionarios
             Database Banco = new Database();
 
             MySqlCommand command = new MySqlCommand();
-            MySqlConnection con = new MySqlConnection();
+            //MySqlConnection con = new MySqlConnection();
 
             try
             {
@@ -110,7 +112,9 @@ namespace Cadastro_de_Funcionarios
                 command.CommandText = "SELECT * FROM DEPARTAMENTO WHERE id =" + cod + "";
                 
                 command.CommandType = CommandType.Text;
-                command.Connection = Banco.objConexao;
+                MySqlConnection con = null;
+                con = Banco.AbrirConexao();
+                command.Connection = con;
                 con.Open();
                 rd = command.ExecuteReader();
                 
@@ -137,8 +141,9 @@ namespace Cadastro_de_Funcionarios
 
             MySqlCommand command = new MySqlCommand();
 
-            Banco.objConexao.Open();
-            command.Connection = Banco.objConexao;
+            MySqlConnection con = null;
+            con = Banco.AbrirConexao();
+            command.Connection = con;
 
             try
             {
@@ -165,8 +170,9 @@ namespace Cadastro_de_Funcionarios
 
             MySqlCommand command = new MySqlCommand();
 
-            Banco.objConexao.Open();
-            command.Connection = Banco.objConexao;
+            MySqlConnection con = null;
+            con = Banco.AbrirConexao();
+            command.Connection = con;
 
             try
             {
