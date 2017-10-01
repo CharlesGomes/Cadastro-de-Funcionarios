@@ -46,13 +46,18 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.TbxRG = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.CbxEstadoCivil = new System.Windows.Forms.ComboBox();
             this.CbxFuncao = new System.Windows.Forms.ComboBox();
             this.TbxDtNasc = new System.Windows.Forms.MaskedTextBox();
             this.MtbMatricula = new System.Windows.Forms.MaskedTextBox();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.tbxLogin = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.tbxSenha = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.tbxRG = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -163,7 +168,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(401, 261);
+            this.label6.Location = new System.Drawing.Point(391, 214);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(49, 16);
             this.label6.TabIndex = 10;
@@ -173,7 +178,7 @@
             // 
             this.TbxEmail.AccessibleName = "E-mail";
             this.TbxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbxEmail.Location = new System.Drawing.Point(404, 280);
+            this.TbxEmail.Location = new System.Drawing.Point(394, 233);
             this.TbxEmail.Name = "TbxEmail";
             this.TbxEmail.Size = new System.Drawing.Size(243, 22);
             this.TbxEmail.TabIndex = 11;
@@ -184,10 +189,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(190, 330);
+            this.button1.Location = new System.Drawing.Point(190, 355);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(135, 33);
-            this.button1.TabIndex = 12;
+            this.button1.TabIndex = 14;
             this.button1.Text = " ";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -198,10 +203,10 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(369, 330);
+            this.button2.Location = new System.Drawing.Point(523, 355);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(114, 33);
-            this.button2.TabIndex = 13;
+            this.button2.TabIndex = 16;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -209,7 +214,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(401, 68);
+            this.label7.Location = new System.Drawing.Point(391, 12);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(134, 16);
             this.label7.TabIndex = 14;
@@ -229,26 +234,17 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(401, 213);
+            this.label9.Location = new System.Drawing.Point(391, 164);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(56, 16);
             this.label9.TabIndex = 17;
             this.label9.Text = "Função:";
             // 
-            // TbxRG
-            // 
-            this.TbxRG.AccessibleName = "RG";
-            this.TbxRG.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbxRG.Location = new System.Drawing.Point(404, 136);
-            this.TbxRG.Name = "TbxRG";
-            this.TbxRG.Size = new System.Drawing.Size(243, 22);
-            this.TbxRG.TabIndex = 8;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(401, 113);
+            this.label10.Location = new System.Drawing.Point(391, 68);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(31, 16);
             this.label10.TabIndex = 19;
@@ -258,7 +254,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(401, 164);
+            this.label11.Location = new System.Drawing.Point(391, 116);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(82, 16);
             this.label11.TabIndex = 21;
@@ -273,7 +269,7 @@
             this.CbxEstadoCivil.Items.AddRange(new object[] {
             "Solteiro",
             "Casado"});
-            this.CbxEstadoCivil.Location = new System.Drawing.Point(404, 184);
+            this.CbxEstadoCivil.Location = new System.Drawing.Point(394, 136);
             this.CbxEstadoCivil.Name = "CbxEstadoCivil";
             this.CbxEstadoCivil.Size = new System.Drawing.Size(243, 24);
             this.CbxEstadoCivil.TabIndex = 9;
@@ -281,15 +277,10 @@
             // CbxFuncao
             // 
             this.CbxFuncao.AccessibleName = "Função";
+            this.CbxFuncao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxFuncao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbxFuncao.FormattingEnabled = true;
-            this.CbxFuncao.Items.AddRange(new object[] {
-            "GERENTE RH",
-            "ANÁLISTA",
-            "DESENVOLVEDOR",
-            "SECRETÁRIO(A)",
-            ""});
-            this.CbxFuncao.Location = new System.Drawing.Point(404, 232);
+            this.CbxFuncao.Location = new System.Drawing.Point(394, 184);
             this.CbxFuncao.Name = "CbxFuncao";
             this.CbxFuncao.Size = new System.Drawing.Size(243, 24);
             this.CbxFuncao.TabIndex = 10;
@@ -297,7 +288,7 @@
             // TbxDtNasc
             // 
             this.TbxDtNasc.AccessibleName = "Data de Nascimento";
-            this.TbxDtNasc.Location = new System.Drawing.Point(404, 90);
+            this.TbxDtNasc.Location = new System.Drawing.Point(394, 34);
             this.TbxDtNasc.Mask = "00/00/0000";
             this.TbxDtNasc.Name = "TbxDtNasc";
             this.TbxDtNasc.Size = new System.Drawing.Size(100, 20);
@@ -316,17 +307,84 @@
             this.MtbMatricula.TabIndex = 1;
             this.MtbMatricula.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
+            // btnLimpar
+            // 
+            this.btnLimpar.FlatAppearance.BorderSize = 0;
+            this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpar.Location = new System.Drawing.Point(359, 355);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(114, 33);
+            this.btnLimpar.TabIndex = 15;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
+            // tbxLogin
+            // 
+            this.tbxLogin.AccessibleName = "Login";
+            this.tbxLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxLogin.Location = new System.Drawing.Point(394, 281);
+            this.tbxLogin.Name = "tbxLogin";
+            this.tbxLogin.Size = new System.Drawing.Size(243, 22);
+            this.tbxLogin.TabIndex = 12;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(391, 262);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(44, 16);
+            this.label12.TabIndex = 23;
+            this.label12.Text = "Login:";
+            // 
+            // tbxSenha
+            // 
+            this.tbxSenha.AccessibleName = "Senha";
+            this.tbxSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxSenha.Location = new System.Drawing.Point(394, 327);
+            this.tbxSenha.Name = "tbxSenha";
+            this.tbxSenha.Size = new System.Drawing.Size(243, 22);
+            this.tbxSenha.TabIndex = 13;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(391, 308);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(50, 16);
+            this.label13.TabIndex = 25;
+            this.label13.Text = "Senha:";
+            // 
+            // tbxRG
+            // 
+            this.tbxRG.AccessibleName = "CPF";
+            this.tbxRG.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxRG.Location = new System.Drawing.Point(394, 87);
+            this.tbxRG.Mask = "0.000.000";
+            this.tbxRG.Name = "tbxRG";
+            this.tbxRG.Size = new System.Drawing.Size(243, 22);
+            this.tbxRG.TabIndex = 8;
+            this.tbxRG.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
             // AddFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(664, 375);
+            this.ClientSize = new System.Drawing.Size(664, 400);
+            this.Controls.Add(this.tbxRG);
+            this.Controls.Add(this.tbxSenha);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.tbxLogin);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.MtbMatricula);
             this.Controls.Add(this.TbxDtNasc);
             this.Controls.Add(this.CbxFuncao);
             this.Controls.Add(this.CbxEstadoCivil);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.TbxRG);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -348,6 +406,7 @@
             this.Name = "AddFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastrar Funcionario";
+            this.Load += new System.EventHandler(this.AddFuncionario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -372,12 +431,17 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox TbxRG;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox CbxEstadoCivil;
         private System.Windows.Forms.ComboBox CbxFuncao;
         private System.Windows.Forms.MaskedTextBox TbxDtNasc;
         private System.Windows.Forms.MaskedTextBox MtbMatricula;
+        private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.TextBox tbxLogin;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox tbxSenha;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.MaskedTextBox tbxRG;
     }
 }

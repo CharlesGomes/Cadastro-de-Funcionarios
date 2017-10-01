@@ -29,10 +29,19 @@ namespace Cadastro_de_Funcionarios
 
                 // Chama a função para autenticar
                 Usuario u = new Usuario();
-                u.LoginUsuario(login, senha);
+                if(u.LoginUsuario(login, senha))
+                {
+                    Sistema sistema = new Sistema();
+                     sistema.Show();
+                    // Fecha a janela de Login
+                    this.Hide();
+                }else
+                {
 
-                // Fecha a janela de Login
-                this.Hide();
+                    MessageBox.Show("Logins ou senha invalidos!");
+                }
+
+
             }
             else
             {
@@ -45,6 +54,14 @@ namespace Cadastro_de_Funcionarios
 
         private void Login_Load(object sender, EventArgs e)
         {
+
+            Usuario usuario = new Usuario();
+            if (usuario.VerificaUsuario())
+            {
+                MessageBox.Show("Bem vindo ao Sistema de RH! Esse é seu primeiro acesso será precisso cadastar um usuario para ter acesso ao sistema!");
+                AddFuncionario addFuncionario = new AddFuncionario();
+                addFuncionario.ShowDialog();
+            }
 
         }
     }

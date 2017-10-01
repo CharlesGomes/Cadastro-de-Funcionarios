@@ -13,16 +13,16 @@ namespace Cadastro_de_Funcionarios
     {
         // Atributos da Classe
         private string nome;
-        private string cpf;
+        private double cpf;
         private string sexo;
         private string endereco;
-        private string telefone;
+        private double telefone;
         private string email;
         private string rg;
         private string est_civil;
-        private int matricula;
+        private double matricula;
         private string nascimento;
-        private string funcao;
+        private int funcao;
 
         public string Nome
         {
@@ -37,7 +37,7 @@ namespace Cadastro_de_Funcionarios
             }
         }
 
-        public string Cpf
+        public double Cpf
         {
             get
             {
@@ -76,7 +76,7 @@ namespace Cadastro_de_Funcionarios
             }
         }
 
-        public string Telefone
+        public double Telefone
         {
             get
             {
@@ -128,7 +128,7 @@ namespace Cadastro_de_Funcionarios
             }
         }
 
-        public int Matricula
+        public double Matricula
         {
             get
             {
@@ -154,7 +154,7 @@ namespace Cadastro_de_Funcionarios
             }
         }
 
-        public string Funcao
+        public int Funcao
         {
             get
             {
@@ -170,7 +170,7 @@ namespace Cadastro_de_Funcionarios
 
 
         // Adiciona um novo Funcionario ao sistema
-        public void adicionarFuncionario(string nome, string cpf, string sexo, string endereco, string telefone, string email, int matricula, string dtNasc, string rg, string estadoCivil, string funcao)
+        public void adicionarFuncionario(string nome, double cpf, string sexo, string endereco, double telefone, string email, double matricula, string dtNasc, string rg, string estadoCivil, int funcao)
         {
             Database Banco = new Database();
 
@@ -179,13 +179,14 @@ namespace Cadastro_de_Funcionarios
             MySqlConnection con = null;
             con = Banco.AbrirConexao();
             command.Connection = Banco.objConexao;
-
+            
             try
             {
-                command.CommandText = "INSERT INTO funcionario(nome, cpf, sexo, endereco, telefone, email, matricula, nasc, rg, estado_civil, funcao) VALUES ('" + nome + "', '" + cpf + "', '" + sexo + "', '" + endereco + "', '" + telefone + "', '" + email + "', '" + matricula + "','" + dtNasc + "', '" + rg + "', '" + estadoCivil + "', '" + funcao + "')";
+                command.CommandText = "INSERT INTO funcionario(nome, cpf, sexo, endereco, telefone, email, matricula, nasc, rg, estado_civil, id) VALUES ('" + nome + "', '" + cpf + "', '" + sexo + "', '" + endereco + "', '" + telefone + "', '" + email + "', '" + matricula + "','" + dtNasc + "', '" + rg + "', '" + estadoCivil + "', '" + funcao + "')";
                 command.ExecuteNonQuery();
 
                 MessageBox.Show("Funcionario cadastrado com sucesso!");
+                
             }
             catch (Exception ex)
             {

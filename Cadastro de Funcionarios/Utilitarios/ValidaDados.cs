@@ -70,33 +70,5 @@ namespace Cadastro_de_Funcionarios.Utilitarios
     }
 
     
-
-        public bool ValidaDadosFuncionario(Funcionario funcionario)
-        {
-            if (string.IsNullOrEmpty(funcionario.Nome))
-                return false;
-            if (string.IsNullOrEmpty(funcionario.Cpf))
-                return false; ;
-            if (string.IsNullOrEmpty(funcionario.Sexo))
-                return false;
-            if (string.IsNullOrEmpty(funcionario.Endereco))
-                return false;
-            if (string.IsNullOrEmpty(funcionario.Telefone))
-                return false;
-            if (string.IsNullOrEmpty(funcionario.Email))
-                return false;
-            if (string.IsNullOrEmpty(funcionario.Rg))
-                return false;
-            if (string.IsNullOrEmpty(funcionario.Est_civil))
-                return false;
-            if (string.IsNullOrEmpty(funcionario.Nascimento))
-                return false;
-           // if (funcionario.Matricula == )
-             //   return false;
-
-            return true;
-
-          
-        }
     }
 }

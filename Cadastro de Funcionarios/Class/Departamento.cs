@@ -42,6 +42,40 @@ namespace Cadastro_de_Funcionarios
             }
         }
 
+        public DataTable RetornarDepartamento()
+        {
+            Database Banco = new Database();
+
+            MySqlCommand command = new MySqlCommand();
+            //MySqlConnection con = new MySqlConnection();
+
+            try
+            {
+                
+                command.CommandText = "SELECT * FROM DEPARTAMENTO ";
+
+                command.CommandType = CommandType.Text;
+                MySqlConnection con = null;
+                con = Banco.AbrirConexao();
+                command.Connection = con;
+               // con.Open();
+               
+
+                DataTable departamento = new DataTable();
+                departamento.Load(command.ExecuteReader());
+
+              
+                return departamento;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+
+        }
+
+
         //Atualiza pelo codigo
         public void AtualizaDepartamento()
         {

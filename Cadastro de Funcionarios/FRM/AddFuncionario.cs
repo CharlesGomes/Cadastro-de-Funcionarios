@@ -16,31 +16,37 @@ namespace Cadastro_de_Funcionarios
         public AddFuncionario()
         {
             InitializeComponent();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             ValidaDados validaDados = new ValidaDados();
+            ///// Verifica os campos vazios ////////
             if (validaDados.validacampos2(this))
             {
 
                 // Recebe os dados do formulário
                 string nome = TbxNome.Text;
-                int matricula = Convert.ToInt32(MtbMatricula.Text);
-                string cpf = TbxCpf.Text;
+                double matricula = Convert.ToDouble(MtbMatricula.Text);
+                double cpf = Convert.ToDouble(TbxCpf.Text);
                 string sexo = TbxSexo.Text;
                 string endereco = TbxEndereco.Text;
-                string telefone = TbxTelefone.Text;
+                double telefone = Convert.ToDouble(TbxTelefone.Text);
                 string email = TbxEmail.Text;
                 string dtNasc = TbxDtNasc.Text;
-                string rg = TbxRG.Text;
+                string rg = tbxRG.Text;
                 string estadoCivil = CbxEstadoCivil.Text;
-                string funcao = CbxFuncao.Text;
+                int funcao = Convert.ToInt32(CbxFuncao.SelectedValue);
+                string login = tbxLogin.Text;
+                string senha = tbxSenha.Text;
+
 
                 // Chama a função para inserir um novo funcionario no sistema
                 Funcionario funcionario = new Funcionario();
                 funcionario.adicionarFuncionario(nome, cpf, sexo, endereco, telefone, email, matricula, dtNasc, rg, estadoCivil, funcao);
-
+                Usuario usuario = new Usuario();
+                usuario.adicionarUsuario(login, senha, cpf);
                 //// Fecha a janela
                 this.Close();
             }
@@ -54,8 +60,40 @@ namespace Cadastro_de_Funcionarios
 
         private void button2_Click(object sender, EventArgs e)
         {
+            /// Fecha a tela de cadastro ///
             this.Close();
         }
 
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            //// Limpa todos os campos do form ////////
+            TbxNome.Text = "";
+            MtbMatricula.Text = "";
+            TbxCpf.Text = "";
+            TbxSexo.SelectedIndex = -1;
+            TbxEndereco.Text = "";
+            TbxTelefone.Text = "";
+            TbxEmail.Text = "";
+            TbxDtNasc.Text = "";
+            tbxRG.Text = "";
+            CbxEstadoCivil.SelectedIndex = -1;
+            CbxFuncao.SelectedIndex = -1;
+            //////////////////////////////////////////
+        }
+
+        private void carrega()
+        {
+            Departamento departamento = new Departamento();
+           
+            CbxFuncao.DataSource = departamento.RetornarDepartamento();
+            CbxFuncao.DisplayMember = "Nome";
+            CbxFuncao.ValueMember = "id";
+
+        }
+
+        private void AddFuncionario_Load(object sender, EventArgs e)
+        {
+            carrega();
+        }
     }
 }

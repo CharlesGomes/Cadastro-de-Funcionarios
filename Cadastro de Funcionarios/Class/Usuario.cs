@@ -40,10 +40,34 @@ namespace Cadastro_de_Funcionarios
             }
         }
 
+        // Adiciona um novo usuario ao sistema
+        public void adicionarUsuario(string login, string senha, double cpf)
+        {
+            Database Banco = new Database();
 
+            MySqlCommand command = new MySqlCommand();
+
+            MySqlConnection con = null;
+            con = Banco.AbrirConexao();
+            command.Connection = Banco.objConexao;
+
+            try
+            {
+                command.CommandText = "INSERT INTO usuario(login, senha, status, cpf) VALUES ('" + login + "', '" + senha + "', 'Ativo', '" + cpf + "')";
+
+                command.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            Banco.objConexao.Close();
+        }
 
         // Função que autentica o usuário e efetua o login no sistema
-        public void LoginUsuario(string login, string senha)
+        public bool LoginUsuario(string login, string senha)
         {
 
             Database Banco = new Database();
@@ -60,22 +84,63 @@ namespace Cadastro_de_Funcionarios
                 command.CommandText = "SELECT count(*) FROM usuario WHERE login= '" + login + "' AND senha= '" + senha + "'";
                 int rowCount = int.Parse(command.ExecuteScalar().ToString());
 
-                if(rowCount == 1)
+                Banco.objConexao.Close();
+
+                if (rowCount == 1)
                 {
-                    Sistema sistema = new Sistema();
-                    sistema.Show();
+                    return true;
+
                 } else
                 {
-                    MessageBox.Show("Usuário ou senha inválido!");
+                    return false;
+                   
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                return false;
             }
 
-            Banco.objConexao.Close();
+            
 
+        }
+
+        // Função verifica se existe usuario cadastrado no banco
+        public bool VerificaUsuario()
+        {
+
+            Database Banco = new Database();
+
+            MySqlCommand command = new MySqlCommand();
+
+            try
+            {
+                MySqlConnection con = null;
+               
+
+                command.CommandText = "SELECT count(*) FROM usuario";
+                con = Banco.AbrirConexao();
+
+                command.Connection = Banco.objConexao;
+                int rowCount = int.Parse(command.ExecuteScalar().ToString());
+
+                if (rowCount == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            
         }
 
     }

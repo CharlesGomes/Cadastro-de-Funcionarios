@@ -43,7 +43,14 @@ namespace Cadastro_de_Funcionarios
 
         private void button2_Click(object sender, EventArgs e)
         {
+            //// Fecha a janela ///
             Close();
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            /// Limpa o campo ///
+            TbxNome.Text = "";
         }
     } 
  }
