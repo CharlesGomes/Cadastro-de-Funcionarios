@@ -170,7 +170,7 @@ namespace Cadastro_de_Funcionarios
 
 
         // Adiciona um novo Funcionario ao sistema
-        public void adicionarFuncionario(string nome, double cpf, string sexo, string endereco, double telefone, string email, double matricula, string dtNasc, string rg, string estadoCivil, int funcao)
+        public void adicionarFuncionario(string nome, double cpf, string sexo, string endereco, double telefone, string email, double matricula, string dtNasc, string rg, string estadoCivil, int funcao, string login, string senha)
         {
             Database Banco = new Database();
 
@@ -185,6 +185,8 @@ namespace Cadastro_de_Funcionarios
                 command.CommandText = "INSERT INTO funcionario(nome, cpf, sexo, endereco, telefone, email, matricula, nasc, rg, estado_civil, id) VALUES ('" + nome + "', '" + cpf + "', '" + sexo + "', '" + endereco + "', '" + telefone + "', '" + email + "', '" + matricula + "','" + dtNasc + "', '" + rg + "', '" + estadoCivil + "', '" + funcao + "')";
                 command.ExecuteNonQuery();
 
+                Usuario usuario = new Usuario();
+                usuario.adicionarUsuario(login, senha, cpf);
                 MessageBox.Show("Funcionario cadastrado com sucesso!");
                 
             }
@@ -192,8 +194,12 @@ namespace Cadastro_de_Funcionarios
             {
                 MessageBox.Show(ex.Message);
             }
+            finally
+            {
+                Banco.objConexao.Close();
+            }
 
-            Banco.objConexao.Close();
+           
         }
 
         // Consulta todos os funcionario do Sistema

@@ -39,14 +39,13 @@ namespace Cadastro_de_Funcionarios
                 string estadoCivil = CbxEstadoCivil.Text;
                 int funcao = Convert.ToInt32(CbxFuncao.SelectedValue);
                 string login = tbxLogin.Text;
-                string senha = tbxSenha.Text;
+                string senha = TbxSenha.Text;
 
 
                 // Chama a função para inserir um novo funcionario no sistema
                 Funcionario funcionario = new Funcionario();
-                funcionario.adicionarFuncionario(nome, cpf, sexo, endereco, telefone, email, matricula, dtNasc, rg, estadoCivil, funcao);
-                Usuario usuario = new Usuario();
-                usuario.adicionarUsuario(login, senha, cpf);
+                funcionario.adicionarFuncionario(nome, cpf, sexo, endereco, telefone, email, matricula, dtNasc, rg, estadoCivil, funcao, login, senha);
+               
                 //// Fecha a janela
                 this.Close();
             }
@@ -78,6 +77,8 @@ namespace Cadastro_de_Funcionarios
             tbxRG.Text = "";
             CbxEstadoCivil.SelectedIndex = -1;
             CbxFuncao.SelectedIndex = -1;
+            tbxLogin.Text = "";
+            TbxSenha.Text = "";
             //////////////////////////////////////////
         }
 

@@ -54,7 +54,7 @@ CONSTRAINT fk_Departamento_Funcionario
 CREATE TABLE IF NOT EXISTS `usuario` (
 `id` int(10) NOT NULL auto_increment,
   `login` varchar(25) NOT NULL,
-  `senha` int(10) NOT NULL,
+  `senha` varchar(25) NOT NULL,
   `status` varchar(25) NOT NULL,
   `cpf` double NOT NULL,
 CONSTRAINT pk_usuario

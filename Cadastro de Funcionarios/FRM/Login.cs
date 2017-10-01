@@ -37,11 +37,8 @@ namespace Cadastro_de_Funcionarios
                     this.Hide();
                 }else
                 {
-
-                    MessageBox.Show("Logins ou senha invalidos!");
+                    MessageBox.Show("Login ou senha invalidos!");
                 }
-
-
             }
             else
             {
@@ -64,5 +61,6 @@ namespace Cadastro_de_Funcionarios
             }
 
         }
+
     }
 }
